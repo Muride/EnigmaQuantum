@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* CSS Document */
+
+#first{
+	width: 100vw;
+	height: 100vh;
+	background-color:#343da6;
+	color:#fff;
+	position:fixed;
+	z-index:999;
+	margin:0 auto;
+	text-align:center;
+	transition:0.5s;
+}
+
+.loaded{
+	opacity:0;
+	visibility: hidden;
+}
+
+.loader-wrapper{
+	position:relative;
+}
+
+.loader,
+.loader:after {
+	border-radius: 50%;
+	width: 40em;
+	height:40em;
+}
+.loader {
+	margin: 60px auto;
+	font-size: 10px;
+	position: relative;
+	text-indent: -9999em;
+	border-top: 3px solid rgba(255, 255, 255, 0.2);
+	border-right: 3px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+	border-left: 3px solid #ffffff;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load8 2s infinite linear;
+	animation: load8 2s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.complete{
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+	border-bottom:3px solid #ffffff;
+	border-left: 3px solid #ffffff;
+	animation-play-state: paused;
+}
+
+.loader-text,.complete-text{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translateY(-50%) translateX(-50%);
+	-webkit- transform: translateY(-50%) translateX(-50%);
+	font-size:30px;
+	color:#FFFFFF;
+	font-family:'Blinker', sans-serif;
+	letter-spacing:0.16em;
+	text-indent:0.16em;
+}
+
+.complete-underline{
+	content: '';
+	display: block;
+	height: 2px;
+	width: 180px;
+	background:#FFF;
+	position:absolute;
+    top: 55%;
+    left:50%;
+	margin-left:-89px;
+	transform:translate(-50%,-50%);
+	transform:scale(0,1); /* 線のx軸の長さを0 */
+	transition: .5s; /* 要素の変形する時間*/
+}
+
+.complete-animation{
+  transform: scale(1,1); /* 線のx軸の長さを1 */
+}
+
+.attention{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-size: 20px;
+}
+
+.volume-select{
+	margin:20px;
+}
+.volume-icon{
+	margin:20px;
+	font-size:40px;
+	text-shadow:1px 0px 10px rgba(255,255,255,0.5);
+	cursor:pointer;
+}
+
+.volume-icon:hover{
+	margin:20px;
+	font-size:40px;
+	text-shadow:0px 0px rgba(0,0,0,0);
+}
+
+
+.top{
+	height:592px;
+	background-image:url("../images/top-bg.png");
+	background-size:cover;
+	text-align:center;
+	
+}
+
+.top-wrapper{
+	max-width:1200px;
+	margin:0 auto;
+	position:relative;
+	height:592px;
+}
+
+.top-logo{
+	width:338px;
+	height:219px;
+	margin:30px auto 0 auto;
+}
+
+.top-character{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+}
+
+#global-nav{
+	height:98px;
+	background: #343da6;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+	width:100%;
+}
+
+.beforescroll{
+	position:relative;
+}
+
+ul{
+	list-style:none
+
+}
+
+.m_fixed {
+	position: fixed;
+	top: 0;
+}
+
+.header-wrapper{
+	margin:0 auto;
+}
+
+
+.header-buttons{
+	text-align: center;
+	font-size: 0
+}
+
+
+.header-buttons li{
+	color:#FFFFFF;
+	font-family:'Blinker', sans-serif;
+	font-size:26px;
+	display: inline-block;
+	margin:34px 20px;
+	cursor:pointer;
+}
+
+.fa-volume-xmark{
+	padding-right:3px;
+}
+
+.spmenu,.sphlogo,.sphmusic{
+	display:none;
+}
+.menu-contents{
+	background-color:#343da6;
+	text-align:center;
+}
+
+.menu-contents li{
+	color:#FFFFFF;
+	font-family:'Blinker', sans-serif;
+	font-size:26px;
+	letter-spacing:0.16em;
+	padding:5px 0px;
+	border-top:solid 1px #fff;
+}
+
+.hidden{
+	display:none;
+}
+
+.contents{
+	background-image:url("../images/main-bg.png");
+	background-size:cover;
+	background-attachment: fixed;
+
+}
+
+.intro{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-weight: normal;
+	font-size: 26px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0px 1px 8px #343da6;
+	padding:60px 0px 50px 0px;
+
+}
+
+.admargin{
+	margin-top:98px;
+}
+
+.section{
+	text-align:center;
+	padding-top:98px;
+	margin-top:-98px;
+}
+
+.arrow{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0px 1px 8px #343da6;
+	padding:0px 0px 50px 0px;
+}
+
+h1{
+	font-family:'Blinker', sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+	letter-spacing: 0.16em;
+	padding-left:0.16em;
+	text-align:center;
+	color: #fff;
+	text-shadow: 0px 1px 4px #343da6;
+	border-bottom: 3px solid #343da6;
+	margin:0px auto 25px auto;
+	display:inline;
+}
+
+.detail{
+	width:95%;
+	max-width:1200px;
+	background: rgba(0, 0, 0, 0.5);
+	outline: 3px solid #fff;
+	outline-offset:-20px;
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-size: 16px;
+	text-align: left;
+	color: #fff;
+	padding:20px;
+	margin:25px auto;
+	clear:both;
+}
+
+.storydetail{
+	margin:20px;
+}
+
+
+.button-wrapper{
+	display:flex;
+	justify-content: center;
+	margin-top:25px;
+}
+
+.button{
+    cursor: pointer;
+	margin:10px 10px 0px 10px;
+	border:solid 3px rgba(0,0,0,0);
+}
+
+.prof{
+	display:flex;
+}
+
+.profimg{
+	border-right:solid 3px #fff;
+}
+
+.name{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-size: 50px;
+	margin:30px 0px 0px 20px;
+}
+
+.eng-name{
+	font-family:'Blinker', sans-serif;
+	letter-spacing: 0.16em;
+	font-size:16px;
+	color:#FFF;
+	margin:7px 22px;
+}
+
+.description{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-size: 20px;
+	margin:20px 10px 20px 20px;
+}
+
+.selecting{
+	border:solid 3px #fff;
+}
+
+.unshown{
+	display:none;
+}
+
+.game-content{
+	display:flex;
+	max-width:1200px;
+	margin:20px;
+	overflow-x: auto;
+}
+
+.game-content li{
+	margin:0px 10px;
+}
+
+.game-content p{
+	margin:10px auto;
+	text-align: center;
+	font-size:16px;
+}
+
+.game-content::-webkit-scrollbar {
+  height: 6px; /* スクロールバーの高さ */
+}
+ 
+.game-content::-webkit-scrollbar-thumb {
+	background:rgba(245,245,245,1); /* ツマミの色 */
+	border-radius: 2px; /* ツマミ両端の丸み */
+ 	box-shadow: 0px 1px 4px #343da6;;
+}
+ 
+.game-content::-webkit-scrollbar-track {
+	background: rgba(0,0,0,0.5); /* トラックの色 */
+	border-radius: 2px; /* トラック両端の丸み */
+}
+
+.newscontents{
+	font-family:'Zen Kaku Gothic New', sans-serif;
+	font-size: 20px;
+	text-align: left;
+	color: #fff;
+	margin:20px;
+}
+
+.newscontents li{
+	margin:5px 0px;
+
+}
+
+.pastinfo{
+	font-size:16px;
+	margin:-10px 0px 20px 10px;
+	text-align:left;
+}
+
+.pastinfo span{
+	text-decoration:underline;
+}
+
+.media{
+	padding-bottom:150px;
+}
+
+.empdiv{
+	margin-bottom:25px;
+}
+
+.twitter-timeline{
+	margin:25px auto 15px auto;
+}
+
+.infobanner{
+	margin-top:30px;
+}
+
+footer{
+	width:100%;
+	height: 193px;
+	background: #343da6;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+	font-family: "Gen Shin Gothic";
+	font-weight: normal;
+	font-size: 16px;
+	text-align:center;
+	color: #fff;
+	position:relative;
+}
+
+footer p{
+	position: absolute;
+ 	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	-webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+@media(max-width:900px){
+
+	.top{
+		height:340px;
+	}
+	.top-wrapper{
+		height:340px;
+	}
+	.top-logo{
+		width:200px;
+		height:129px;
+	}
+	.intro{
+		font-size:22px;
+		margin:0 20px;
+	}
+	
+	.header-buttons{
+		display:none;
+	}
+	
+	
+	.hidden{
+		display:none;
+	}
+	
+	.header-wrapper{
+		position:relative;
+	}
+	
+	.sphmusic{
+		color:#FFFFFF;
+		font-size:26px;
+		display: inline-block;
+		margin:34px 30px;
+		cursor:pointer;
+	}
+	.sphlogo{
+		height:70px;
+		display:block;
+		margin:0 auto;
+		position:absolute;
+		left: 50%;
+		top:49px;
+		transform: translateY(-50%) translateX(-50%);
+		-webkit- transform: translateY(-50%) translateX(-50%);
+	}
+	
+	.spmenu{
+		display:block;
+		position:absolute;
+		top:38px;
+		right:30px;
+		cursor:pointer;
+		width:45px;
+		height:30px;
+	}
+	
+	.menuicon,.menuicon::before,.menuicon::after{
+		content: '';
+		display: block;
+		height: 3px;
+		width: 35px;
+		border-radius: 3px;
+		background: #FFF;
+		transition: 0.5s;
+		position:absolute;
+	}
+	.menuicon::before{
+		top:10px;
+	}
+	.menuicon::after{
+		top:20px;
+	}
+	
+	.iconclicked{
+		top:10px;
+  		transform: rotate(45deg);
+	}
+	
+	.iconclicked::before{
+		background: rgba(255, 255, 255, 0);
+	}
+	.iconclicked::after{
+		top:0px;
+  		transform: rotate(90deg);
+	}
+	
+	.menu-contents{
+		position:absolute;
+		top:98px;
+		width:100%;
+		text-align:center;
+		background-color:rgba(52,61,166,1);
+		transition:0.5s;
+		opacity:1;
+	}
+	
+	.afterscroll{
+		position:absolute;
+		top:98px;
+		width:100%;
+		text-align:center;
+		background-color:rgba(52,61,166,1);
+	}
+	
+	.menu-contents li{
+		color:#FFFFFF;
+		font-family:'Blinker', sans-serif;
+		font-size:26px;
+		letter-spacing:0.16em;
+		padding:5px 0px;
+		border-top:solid 1px #fff;
+
+	}
+	
+	
+	
+	.button{
+		margin:5px 5px 0px 5px;
+	}
+	
+	.button img{
+		width:70px;
+		height:70px;
+	}
+	
+	.name{
+		font-size:22px;
+	}
+	.eng-name{
+		font-size:8px;
+	}
+	.description{
+		font-size:18px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
