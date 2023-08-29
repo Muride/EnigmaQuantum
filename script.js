@@ -1,26 +1,37 @@
 // JavaScript Document
+var autoselect = setTimeout(function(){
+		$(".musicon").addClass("hidden");
+		$(".musicoff").removeClass("hidden");
+		$("#first").addClass("loaded");
+	}, 5200 );
+
 $(function(){
 	setTimeout(function(){
 		$(".loader").addClass("complete");
 		$(".loader-text,.complete-text").toggleClass("hidden");
 		$(".complete-underline").toggleClass("complete-animation")
 	}, 2000 );
+	setTimeout(function(){
+		$(".selectmusicoff").addClass("ho-ver");
+	}, 5000 );
 });
 
-
 $(function(){
-	$(".selectmusicoff").click(function(){
-		$(".musicon").addClass("hidden");
-		$(".musicoff").removeClass("hidden");
-		$("#first").addClass("loaded");
-	});
 	$(".selectmusicon").click(function(){
 		$(".musicoff").addClass("hidden");
 		$(".musicon").removeClass("hidden");
 		$("#first").addClass("loaded");
 		$('#audio').get(0).play();
+		clearTimeout(autoselect);
+	});
+	$(".selectmusicoff").click(function(){
+		$(".musicon").addClass("hidden");
+		$(".musicoff").removeClass("hidden");
+		$("#first").addClass("loaded");
+		clearTimeout(autoselect);
 	});
 });
+
 
 $(function(){
 	$(".musicon").click(function(){
