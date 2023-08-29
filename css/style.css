@@ -613,7 +613,7 @@ footer p{
 	}
 	.profimg{
 		border-right:none;
-		height:380px;
+		height:300px;
   		object-fit:cover;
 		object-position:top;
 	}
