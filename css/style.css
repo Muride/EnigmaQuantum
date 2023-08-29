@@ -574,7 +574,7 @@ footer p{
 	}
 }
 
-@media(max-width:800px){
+@media(max-width:500px){
 	.loader,
 	.loader:after {
 		border-radius: 50%;
