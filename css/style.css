@@ -575,7 +575,7 @@ footer p{
 	}
 }
 
-@media(max-width:800px){
+@media(max-width:500px){
 	.loader,
 	.loader:after {
 		border-radius: 50%;
@@ -630,11 +630,11 @@ footer p{
 		margin:0 auto;
 	}
 	.media img{
-		width:350px;
+		width:80%;
 	}
 	
 	.game-content img{
-		width:250px;
+		width:200px;
 	}
 	.game-content p{
 		font-size:17px;
