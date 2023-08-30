@@ -113,35 +113,3 @@ $(function() {
         $(".prof1,.prof2,.prof3,.prof4,.prof5").addClass("unshown");
     });
 });
-
- $(window).on('load resize', function(){
-        var winW = $(window).width();
-        var devW = 900;
-        if (winW <= devW) {
-            //以下の時の処理
-			jQuery( window ).on( 'scroll', function() {
-			if ( 340 < jQuery( this ).scrollTop() ) { // 340px以上スクロールしたら
-			jQuery( '#global-nav' ).addClass( 'm_fixed' );
-			jQuery( '.contents' ).addClass( 'admargin' );
-			jQuery('#global-nav').removeClass('beforescroll');
-			jQuery('.menu-contents').addClass('afterscroll');
-			} else {
-			jQuery( '#global-nav' ).removeClass( 'm_fixed' );
-			jQuery( '.contents' ).removeClass( 'admargin' );
-			jQuery('#global-nav').addClass('beforescroll');
-			jQuery('.menu-contents').removeClass('afterscroll');
-			}
-			});
-        } else {
-            //大きい時の処理
-			jQuery( window ).on( 'scroll', function() {
-			if ( 592 < jQuery( this ).scrollTop() ) { // 592px以上スクロールしたら
-			jQuery( '#global-nav' ).addClass( 'm_fixed' );
-			jQuery( '.contents' ).addClass( 'admargin' );
-			} else {
-			jQuery( '#global-nav' ).removeClass( 'm_fixed' );
-			jQuery( '.contents' ).removeClass( 'admargin' );
-			}
-			});
-        }
-    });
