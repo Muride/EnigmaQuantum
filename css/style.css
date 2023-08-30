@@ -1,5 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
+img{
+    /*画像保存できないように*/
+	pointer-events: none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    user-select:none;
+}
 
 #first{
 	width: 100vw;
