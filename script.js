@@ -21,7 +21,7 @@ $(function(){
 		$(".musicoff").addClass("hidden");
 		$(".musicon").removeClass("hidden");
 		$("#first").addClass("loaded");
-		$('#audio').get(0).play();
+		$("#audio").get(0).play();
 		clearTimeout(autoselect);
 	});
 	$(".selectmusicoff").click(function(){
