@@ -16,12 +16,29 @@ $(function(){
 	}, 5000 );
 });
 
+var fadeOut = function(){
+	$("#audio").get(0).volume = 0.75;
+	setTimeout(function(){$("#audio").get(0).volume = 0.5;},100);
+	setTimeout(function(){$("#audio").get(0).volume = 0.25;},200);
+	setTimeout(function(){$("#audio").get(0).volume = 0;},300);
+	setTimeout(function(){$("#audio").get(0).pause();},400);
+}
+
+var fadeIn = function(){
+	$("#audio").get(0).volume = 0;
+	$('#audio').get(0).play();
+	setTimeout(function(){$("#audio").get(0).volume = 0.25;},100);
+	setTimeout(function(){$("#audio").get(0).volume = 0.5;},200);
+	setTimeout(function(){$("#audio").get(0).volume = 0.75;},300);
+	setTimeout(function(){$("#audio").get(0).volume = 1;},400);
+}
+
 $(function(){
 	$(".selectmusicon").click(function(){
 		$(".musicoff").addClass("hidden");
 		$(".musicon").removeClass("hidden");
 		$("#first").addClass("loaded");
-		$("#audio").get(0).play();
+		fadeIn();
 		clearTimeout(autoselect);
 	});
 	$(".selectmusicoff").click(function(){
@@ -37,12 +54,12 @@ $(function(){
 	$(".musicon").click(function(){
 		$(".musicoff").removeClass("hidden");
 		$(".musicon").addClass("hidden");
-		$('#audio').get(0).pause();
+		fadeOut();
 	});
 	$(".musicoff").click(function(){
 		$(".musicoff").addClass("hidden");
 		$(".musicon").removeClass("hidden");
-		$('#audio').get(0).play();
+		fadeIn();
 	});
 });
 
