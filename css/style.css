@@ -267,6 +267,13 @@ ul{
 	padding:0px 0px 50px 0px;
 }
 
+.yt-video{
+	display:block;
+	margin:0 auto 20px auto;
+	width:100%;
+	max-width:560px;
+}
+
 h1{
 	font-family:'Blinker', sans-serif;
 	font-weight: bold;
@@ -548,11 +555,11 @@ footer p{
 		font-size:8px;
 	}
 	.description{
-		font-size:18px;
+		font-size:16px;
 	}
 }
 
-@media(max-width:500px){
+@media(max-width:550px){
 	.loader,
 	.loader:after {
 		border-radius: 50%;
